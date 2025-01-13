@@ -1,0 +1,128 @@
+---
+import Link from "./ui/link.astro";
+---
+
+<div class="bg-gray-200 text-dark">
+  <div
+    class="p-8 md:px-20 md:py-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center max-w-screen-xl mx-auto px-5">
+    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">
+      Frequently Asked Questions
+    </h2>
+    <div class="mt-8 space-y-4 w-full">
+      <div class="bg-white rounded-lg shadow-md">
+        <button
+          class="w-full flex justify-between items-center px-6 py-6 text-left focus:outline-none faq-button">
+          <span class="text-lg font-medium"
+            >Apa itu Jaring Data Nusantara?</span
+          >
+          <svg
+            class="h-6 w-6 text-gray-400 faq-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="px-6 pb-6 text-gray-700 text-left faq-answer hidden">
+          Yes, you can easily upgrade or downgrade your plan at any time. Simply
+          navigate to the account settings in your dashboard and choose the
+          desired plan. The changes will be reflected immediately, and any
+          adjustments in pricing will be applied on your next billing cycle. Our
+          support team is more than happy to provide guidance and
+          recommendations.
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md">
+        <button
+          class="w-full flex justify-between items-center px-6 py-6 text-left focus:outline-none faq-button">
+          <span class="text-lg font-medium"
+            >Bagaimana agar saya mendapatkan informasi seputar layanan JDN?</span
+          >
+          <svg
+            class="h-6 w-6 text-gray-400 faq-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="px-6 pb-6 text-gray-700 text-left faq-answer hidden">
+          Yes, you can easily upgrade or downgrade your plan at any time. Simply
+          navigate to the account settings in your dashboard and choose the
+          desired plan. The changes will be reflected immediately, and any
+          adjustments in pricing will be applied on your next billing cycle. Our
+          support team is more than happy to provide guidance and
+          recommendations.
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md">
+        <button
+          class="w-full flex justify-between items-center px-6 py-6 text-left focus:outline-none faq-button">
+          <span class="text-lg font-medium">Apa yang dimaksud dengan CLEON?</span>
+          <svg
+            class="h-6 w-6 text-gray-400 faq-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="px-6 pb-6 text-gray-700 text-left faq-answer hidden">
+          CLEON adalah layanan internet inovatif yang menawarkan fleksibilitas 
+          dan kemudahan dengan sistem voucher dan pembayaran bulanan.
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md">
+        <button
+          class="w-full flex justify-between items-center px-6 py-6 text-left focus:outline-none faq-button">
+          <span class="text-lg items-center font-medium"
+            >Apa itu Model Kemitraan Bagi Hasil CLEON?</span
+          >
+          <svg
+            class="h-6 w-6 text-gray-400 faq-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="px-6 pb-6 text-gray-700 text-left faq-answer hidden">
+          Model kemitraan bagi hasil CLEON adalah sistem di mana mitra mendapatkan keuntungan dari 
+          pendapatan internet yang dibagi secara transparan dan adil. Persentase pembagian disesuaikan 
+          berdasarkan kesepakatan awal biasanya 10% dan pembagian hasil dilakukan sebulan sekali.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const faqButtons = document.querySelectorAll(".faq-button");
+    const faqIcons = document.querySelectorAll(".faq-icon");
+    const faqAnswers = document.querySelectorAll(".faq-answer");
+
+    faqButtons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        faqAnswers[index].classList.toggle("hidden");
+        faqIcons[index].classList.toggle("rotate-180");
+      });
+    });
+  });
+</script>
